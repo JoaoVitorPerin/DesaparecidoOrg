@@ -18,12 +18,27 @@ export class BarraPesquisaComponent {
 
   pesquisar(): void {
     const resultadoPesquisa = {
-      nome: this.nome.value ?? '',
-      sexo: this.sexo.value ?? '',
-      idade: this.idade.value ?? '',
+      nome: this.nome.value,
+      sexo: this.sexo.value ,
+      idade: this.idade.value,
     };
-    this.apiService.pesquisa(resultadoPesquisa?.nome, resultadoPesquisa?.sexo, resultadoPesquisa?.idade).subscribe({
+
+    if(!resultadoPesquisa.nome && !resultadoPesquisa.sexo && !resultadoPesquisa.idade){
+      alert('Preencha pelo menos um campo da pesquisa!');
+      return
+    }
+
+    if (typeof resultadoPesquisa.nome !== 'string') {
+      alert('Por favor, insira um nome válido!');
+      return;
+    }
+
+    this.apiService.pesquisa(resultadoPesquisa.nome!, resultadoPesquisa?.sexo!, resultadoPesquisa?.idade!).subscribe({
       next: (dados: any) => {
+        if (dados.content && dados.content.length === 0) {
+          alert('Nenhuma pessoa encontrada com esses dados!');
+          return;
+        }
         this.pesquisaRealizada.emit(dados.content);
       }
     })

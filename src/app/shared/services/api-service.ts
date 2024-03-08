@@ -16,7 +16,7 @@ export class ApiService {
     }
 
     pesquisa(nome: string, sexo: string, idade: string): Observable<APIModel> {
-        const URL = `https://abitus-api.pjc.mt.gov.br/v1/pessoas/aberto/filtro?faixaIdadeFinal=${idade}&faixaIdadeInicial=&nome=${nome}&porPagina=12&sexo=${sexo}&status=DESAPARECIDO&pagina=`;
+        const URL = `https://abitus-api.pjc.mt.gov.br/v1/pessoas/aberto/filtro?faixaIdadeFinal=${idade}&faixaIdadeInicial=${idade}&nome=${nome}&porPagina=12&sexo=${sexo}&status=DESAPARECIDO&pagina=`;
         return this.http.get<APIModel>(URL);
     }
 
