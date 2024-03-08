@@ -17,7 +17,7 @@ export class BotaoPaginacaoComponent {
   constructor(public apiService: ApiService) {}
 
   voltarPagina(): void {
-    this.paginaAnt = this.paginaAnt == 0 ? 0 : this.pagina - 1;
+    this.paginaAnt = this.pagina == 0 ? 0 : this.pagina - 1;
     this.mudarPagina.emit(this.paginaAnt);
   }
 

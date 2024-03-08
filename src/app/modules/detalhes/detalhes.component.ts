@@ -12,6 +12,7 @@ export class DetalhesComponent implements OnInit {
   id: number = 0;
   infosDesaparecido: any;
   urlSite: any;
+  urlFotoPadrao: string = '../../../../assets/perfil.png'
 
   constructor(private route: ActivatedRoute, public apiService: ApiService, private location: Location) { }
 

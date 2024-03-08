@@ -27,7 +27,6 @@ export class PrincipalComponent implements OnInit{
     this.apiService.buscarDesaparecidosPaginado(pagina).subscribe({
       next: (dados: any) => {
         this.paginaAtual = pagina;
-        console.log(dados.content)
         this.listaDesaparecidos = dados.content;
       }
     });

@@ -3,6 +3,7 @@
     <div class="mt-5">
       <app-botao-paginacao [pagina]="paginaAtual" (mudarPagina)="buscarDesaparecidos($event)"></app-botao-paginacao>
     </div>
+    <h3 class="text-center text-primary"><b>ÚLTIMOS DESAPECIDOS:</b></h3>
     <div class="row d-flex align-items-center justify-content-center mt-3 mx-3">
       <div class="col-12 col-md-4" *ngFor="let desaparecido of listaDesaparecidos">
         <app-card [desaparecido]="desaparecido"></app-card>
