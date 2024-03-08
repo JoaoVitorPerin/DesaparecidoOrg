@@ -1,0 +1,24 @@
+<a href="/principal" class="voltar ml-4">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+    </svg>
+    Voltar
+</a>
+<div class="d-flex flex-row align-items-center justify-content-around row card mt-4 mx-4">
+    <img alt="Foto Pessoa" src="{{infosDesaparecido?.urlFoto}}" class="my-4">
+    <div class="d-flex flex-column">
+        <p><b>Nome:</b> {{infosDesaparecido?.nome}}</p>
+        <p><b>Idade:</b> {{infosDesaparecido?.idade}}</p>
+        <p><b>Sexo:</b> {{infosDesaparecido?.sexo}}</p>
+        <p><b>Local de desaparecimento:</b> {{infosDesaparecido?.ultimaOcorrencia?.localDesaparecimentoConcat}}</p>
+        <p><b>Data de desaparecimento:</b> {{infosDesaparecido?.ultimaOcorrencia?.dtDesaparecimento | date: 'dd/MM/yyyy - HH:mm' }}</p>
+    </div>
+</div>
+<div>
+
+</div>
+<div class="d-flex align-items-center justify-content-end mr-4">
+    <span class="mr-2">Comspartilhe para mais pessoas!</span>
+    <a class="mr-2" href="https://wa.me/?text={{urlSite}}" target="_blank"><img src="../../../assets/whatsapp.png" alt="facebook icon" width="30"></a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{urlSite}}" target="_blank"><img src="../../../assets/face.png" alt="facebook icon" width="30"></a>
+</div>

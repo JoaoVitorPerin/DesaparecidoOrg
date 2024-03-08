@@ -1,0 +1,9 @@
+<section>
+    <app-barra-pesquisa (pesquisaRealizada)="atualizarListaDesaparecidos($event)"></app-barra-pesquisa>
+    <div class="row d-flex align-items-center justify-content-center mt-5 mx-3">
+      <div class="col-12 col-md-4" *ngFor="let desaparecido of listaDesaparecidos">
+        <app-card [desaparecido]="desaparecido"></app-card>
+    </div>
+    </div>
+    <app-botao-paginacao [pagina]="paginaAtual" (mudarPagina)="buscarDesaparecidos($event)"></app-botao-paginacao>
+</section>

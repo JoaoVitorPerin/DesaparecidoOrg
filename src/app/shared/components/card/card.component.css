@@ -1,0 +1,12 @@
+.card-header img{
+    width: 100px;
+    height: 100px;
+    padding: 3px;
+    border: 2px solid white;
+    border-radius: 50%;
+    transition: transform 1s;
+}
+.card-header img:hover{
+    transform: scale(1.2);
+    transition: transform 1s;
+}

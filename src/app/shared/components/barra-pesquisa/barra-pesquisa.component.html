@@ -1,0 +1,10 @@
+<form class="form-group d-flex align-items-center justify-content-center row mt-3 mx-4">
+    <input type="text" class="form-control col-12 mt-3 mt-md-0 col-md-4 mx-3" [formControl]="nome" placeholder="Nome:">
+    <select class="form-control col-12 mt-3 mt-md-0 col-md-2 mx-3" [formControl]="sexo">
+        <option disabled>Selecione:</option>
+        <option>Masculino</option>
+        <option>Feminino</option>
+      </select>
+    <input type="text" class="form-control col-12 mt-3 mt-md-0 col-md-3 mx-3" [formControl]="idade" placeholder="Idade:">
+    <button type="button" class="btn btn-primary col-12 col-md-2 mt-4 mt-md-0" (click)="pesquisar()">Pesquisar</button>
+</form>
